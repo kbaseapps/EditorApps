@@ -23,47 +23,24 @@ default: compile
 all: compile build build-startup-script build-executable-script build-test-script
 
 compile:
-	kb-sdk compile $(SPEC_FILE) \
-		--out $(LIB_DIR) \
-		--plclname $(SERVICE_CAPS)::$(SERVICE_CAPS)Client \
-		--jsclname javascript/Client \
-		--pyclname $(SERVICE_CAPS).$(SERVICE_CAPS)Client \
-		--javasrc src \
-		--java \
-		--javasrv \
-		--javapackage .;
+	@echo "no op compile"
 
 build:
-	$(ANT) war -Djars.dir=$(JARS_DIR)
 	chmod +x $(SCRIPTS_DIR)/entrypoint.sh
+	@echo "no opt build"
 
 build-executable-script:
-	mkdir -p $(LBIN_DIR)
-	$(ANT) build-executable-script -Djars.dir=$(JARS_DIR) -Dexec.cmd.file=$(EXECUTABLE_SCRIPT_NAME)
-	chmod +x $(LBIN_DIR)/$(EXECUTABLE_SCRIPT_NAME)
+	@echo "no op build executable script"
 
 build-startup-script:
-	mkdir -p $(LBIN_DIR)
-	echo '#!/bin/bash' > $(SCRIPTS_DIR)/$(STARTUP_SCRIPT_NAME)
-	echo 'script_dir=$$(dirname "$$(readlink -f "$$0")")' >> $(SCRIPTS_DIR)/$(STARTUP_SCRIPT_NAME)
-	echo 'cd $(SCRIPTS_DIR)' >> $(SCRIPTS_DIR)/$(STARTUP_SCRIPT_NAME)
-	echo 'java -cp $(JARS_DIR)/jetty/jetty-start-7.0.0.jar:$(JARS_DIR)/jetty/jetty-all-7.0.0.jar:$(JARS_DIR)/servlet/servlet-api-2.5.jar \
-		-DKB_DEPLOYMENT_CONFIG=$$script_dir/../deploy.cfg -Djetty.port=5000 org.eclipse.jetty.start.Main jetty.xml' >> $(SCRIPTS_DIR)/$(STARTUP_SCRIPT_NAME)
-	chmod +x $(SCRIPTS_DIR)/$(STARTUP_SCRIPT_NAME)
+	@echo "no op build-startup-script"
 
 build-test-script:
-	echo '#!/bin/bash' > $(TEST_DIR)/$(TEST_SCRIPT_NAME)
-	echo 'script_dir=$$(dirname "$$(readlink -f "$$0")")' >> $(TEST_DIR)/$(TEST_SCRIPT_NAME)
-	echo 'export KB_DEPLOYMENT_CONFIG=$$script_dir/../deploy.cfg' >> $(TEST_DIR)/$(TEST_SCRIPT_NAME)
-	echo 'export KB_AUTH_TOKEN=`cat /kb/module/work/token`' >> $(TEST_DIR)/$(TEST_SCRIPT_NAME)
-	echo 'export JAVA_HOME=$(JAVA_HOME)' >> $(TEST_DIR)/$(TEST_SCRIPT_NAME)
-	echo '$(ANT) test -Djars.dir=$(JARS_DIR)' >> $(TEST_DIR)/$(TEST_SCRIPT_NAME)
-	chmod +x $(TEST_DIR)/$(TEST_SCRIPT_NAME)
+	@echo "no opt build-test-script"
 
 test:
-	if [ ! -f /kb/module/work/token ]; then echo -e '\nOutside a docker container please run "kb-sdk test" rather than "make test"\n' && exit 1; fi
-	bash $(TEST_DIR)/$(TEST_SCRIPT_NAME)
+	@echo "nothint to test"
 
 clean:
-	rm -rfv $(LBIN_DIR)
+	@echo "nothing to clean"
 	

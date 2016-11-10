@@ -2,7 +2,7 @@ module-name:
     EditorApps
 
 module-description:
-    A KBase module
+    A collection of Editor front end App specifications
 
 service-language:
     java

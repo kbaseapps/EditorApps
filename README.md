@@ -3,4 +3,4 @@
 # EditorApps
 ---
 
-This is the basic readme for this module. Include any usage or deployment instructions and links to other documentation here.
+This modules services as a source of simple editor apps which do not require a back end service.
