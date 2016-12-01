@@ -3,7 +3,7 @@
 #
 name: Reads Set Editor
 tooltip: |
-    Allows to create and edit a set of sequence reads objects
+    Create and edit a set of sequence reads objects.
 screenshots: []
 
 icon: icon.png
@@ -28,7 +28,62 @@ suggestions:
 #
 parameters : {}
 
-    
+# Note: the description content is edited in Markdown, using a tool like
+# https://domchristie.github.io/to-markdown/
+# to convert the html to markdown, and then using the html export feature of your favorite
+# editor to convert back to html for inclusion here.
+# NB you must indent the text to adhere to      
 description : |
-    <p>This method allows you to create and edit sets of sequence reads objects.</p>
+    <p>The <em>Reads Set Editor</em> allows you to create and edit sets of sequence reads objects.</p>
 
+    <h3>To use the Reads Set Editor:</h3>
+
+    <ul>
+    <li>Locate the app &quot;Reads Set Editor&quot; in the App Panel</li>
+    <li>Click the title of the Reads Set Editor app to insert the app into your Narrative</li>
+    <li>The Reads Set editor will now be available from within your Narrative.</li>
+    </ul>
+
+    <h4>Note:</h4>
+
+    <ul>
+    <li>You may move the editor cell up or down, or temporarily collapse it down when you are not using it.</li>
+    <li>You may also remove it from your Narrative when you no longer need it -- any Reads Sets created or modified by the editor will remain in your Narrative -- and simply add it back when you need it again.</li>
+    </ul>
+
+    <h3>To create a new Reads Set:</h3>
+
+    <ul>
+    <li>Insert the Reads Set editor as described above.</li>
+    <li>If you wish to edit an existing Reads Set in your Narrative, select it from the dropdown.</li>
+    <li>The Reads Set Editor will fetch the Reads Set object and display the editor below</li>
+    <li>An empty Reads Set will have been created -- you should see it appear momentarily in the Data Panel</li>
+    </ul>
+
+    <h3>To edit an existing Reads Set</h3>
+
+    <ul>
+    <li>Insert the Reads Set editor as described above.</li>
+    <li>Enter the name of the new Reads Set. This will become the object name of the new Reads Set, and so should adhere to the rules for workspace object names:
+
+    <ul>
+    <li>no spaces </li>
+    <li>no non-alphanumeric characters other than _ and -</li>
+    </ul></li>
+    <li>Provide a description for the Reads Set. (optional)</li>
+    <li>To add a new Reads Object entry 
+
+    <ul>
+    <li>click the &quot;Add New&quot; button in the Items field</li>
+    <li>select the Reads Object from the dropdown list. Available reads objects must already be listed in your Data Panel.</li>
+    <li>Provide a descriptive label for the Reads Object. </li>
+    </ul></li>
+    <li>To remove a Reads Object from your set, simply click the X button on the right hand side of it.</li>
+    <li>When you are finished, click the Save button at the bottom of the editor. The Reads Set editor does not automatically save your changes</li>
+    <li>To confirm your changes, you may observe that the version number and save date has updated in the Data Panel.</li>
+    </ul>
+
+
+
+
+more:
