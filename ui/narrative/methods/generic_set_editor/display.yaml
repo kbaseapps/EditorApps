@@ -1,0 +1,89 @@
+#
+# define display information
+#
+name: Set Editor
+tooltip: |
+    Edit any set of objects in KBase.
+screenshots: []
+
+icon: icon.png
+
+#
+# define a set of similar methods that might be useful to the user
+#
+suggestions:
+    apps:
+        related:
+            []
+        next:
+            []
+    methods:
+        related:
+            []
+        next:
+            []
+
+#
+# Configure the display and description of parameters
+#
+parameters : {}
+
+# Note: the description content is edited in Markdown, using a tool like
+# https://domchristie.github.io/to-markdown/
+# to convert the html to markdown, and then using the html export feature of your favorite
+# editor to convert back to html for inclusion here.
+# NB you must indent the text to adhere to
+description : |
+    <p>The <em>Set Editor</em> allows you to create and edit sets objects of the same type.</p>
+
+    <h3>To use the Set Editor:</h3>
+
+    <ul>
+    <li>Locate the app &quot;Set Editor&quot; in the App Panel</li>
+    <li>Click the title of the Set Editor app to insert the app into your Narrative</li>
+    <li>The Set editor will now be available from within your Narrative.</li>
+    </ul>
+
+    <h4>Note:</h4>
+
+    <ul>
+    <li>You may move the editor cell up or down, or temporarily collapse it down when you are not using it.</li>
+    <li>You may also remove it from your Narrative when you no longer need it -- any Sets created or modified by the editor will remain in your Narrative -- and simply add it back when you need it again.</li>
+    </ul>
+
+    <h3>To create a new Set:</h3>
+
+    <ul>
+    <li>Insert the Set editor as described above.</li>
+    <li>If you wish to edit an existing Set in your Narrative, select it from the dropdown.</li>
+    <li>The Set Editor will fetch the Set object and display the editor below</li>
+    <li>An empty Set will have been created -- you should see it appear momentarily in the Data Panel</li>
+    </ul>
+
+    <h3>To edit an existing Set</h3>
+
+    <ul>
+    <li>Insert the Set editor as described above.</li>
+    <li>Enter the name of the new Set. This will become the object name of the new Set, and so should adhere to the rules for workspace object names:
+
+    <ul>
+    <li>no spaces </li>
+    <li>no non-alphanumeric characters other than _ and -</li>
+    </ul></li>
+    <li>Provide a description for the Set. (optional)</li>
+    <li>To add a new Object entry
+
+    <ul>
+    <li>click the &quot;Add New&quot; button in the Items field</li>
+    <li>select the Object from the dropdown list. Available reads objects must already be listed in your Data Panel.</li>
+    <li>Provide a descriptive label for the Object. </li>
+    </ul></li>
+    <li>To remove a Object from your set, simply click the X button on the right hand side of it.</li>
+    <li>When you are finished, click the Save button at the bottom of the editor. The Set editor does not automatically save your changes</li>
+    <li>To confirm your changes, you may observe that the version number and save date has updated in the Data Panel.</li>
+    </ul>
+
+
+
+
+more:
